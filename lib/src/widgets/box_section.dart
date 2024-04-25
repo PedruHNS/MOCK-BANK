@@ -6,9 +6,14 @@ class BoxSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Ink(
       padding: const EdgeInsets.all(16),
-      child: Card(child: contents),
+      decoration: BoxDecoration(
+        color: Theme.of(context).cardColor,
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: kElevationToShadow[3],
+      ),
+      child: contents,
     );
   }
 }

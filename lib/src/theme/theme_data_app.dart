@@ -3,9 +3,10 @@ import 'package:loyout_bank/src/theme/theme_color.dart';
 
 class ThemeDataApp {
   static ThemeData get themeDefault => ThemeData(
-        cardTheme:
-            const CardTheme(color: ThemeColor.backgroundCard, elevation: 4),
         useMaterial3: true,
+        cardColor: ThemeColor.backgroundCard,
+        primarySwatch: ThemeColor.primaryColor,
+        primaryColor: ThemeColor.primaryColor,
         brightness: Brightness.dark,
         textTheme: const TextTheme(
           bodyMedium: TextStyle(fontSize: 16),
@@ -13,6 +14,7 @@ class ThemeDataApp {
             fontSize: 33,
             fontWeight: FontWeight.w700,
           ),
+          titleMedium: TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
         ),
         textButtonTheme: TextButtonThemeData(
           style: ButtonStyle(
@@ -22,6 +24,11 @@ class ThemeDataApp {
               const TextStyle(fontSize: 19, fontWeight: FontWeight.w700),
             ),
           ),
+        ),
+        dividerTheme: const DividerThemeData(
+          space: 16,
+          thickness: 1,
+          color: Colors.white,
         ),
       );
 }

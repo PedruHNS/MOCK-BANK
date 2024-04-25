@@ -9,53 +9,53 @@ class SectionBalance extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BoxSection(
-      contents: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: BoxSection(
+        contents: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                Row(
                   children: [
-                    Text(
-                      'Saída',
-                      style: Theme.of(context).textTheme.bodyMedium,
+                    Padding(
+                      padding: const EdgeInsets.only(right: 4),
+                      child: DotIdentifier(
+                        color: ThemeColor.colorDotBalance['withdraw'],
+                      ),
                     ),
-                    Row(
+                    Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const DotIdentifier(color: Colors.red),
-                        Text(
-                          '\$1300',
-                          style: Theme.of(context).textTheme.bodyLarge,
-                        ),
+                        Text('Saída',
+                            style: Theme.of(context).textTheme.bodyMedium),
+                        Text('\$650.63',
+                            style: Theme.of(context).textTheme.bodyLarge),
                       ],
-                    ),
+                    )
                   ],
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 16),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  child: Row(
                     children: [
-                      Text(
-                        'Entrada',
-                        style: Theme.of(context).textTheme.bodyMedium,
+                      Padding(
+                        padding: const EdgeInsets.only(right: 4),
+                        child: DotIdentifier(
+                          color: ThemeColor.colorDotBalance['deposit'],
+                        ),
                       ),
-                      Row(
+                      Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const DotIdentifier(color: Colors.blue),
-                          Text(
-                            '\$1900',
-                            style: Theme.of(context).textTheme.bodyLarge,
-                          ),
+                          Text('Entrada',
+                              style: Theme.of(context).textTheme.bodyMedium),
+                          Text('\$1850.36',
+                              style: Theme.of(context).textTheme.bodyLarge),
                         ],
-                      ),
+                      )
                     ],
                   ),
                 ),
@@ -86,7 +86,7 @@ class SectionBalance extends StatelessWidget {
 }
 
 class _Progress extends StatelessWidget {
-  const _Progress({super.key});
+  const _Progress();
 
   @override
   Widget build(BuildContext context) {

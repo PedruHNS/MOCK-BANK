@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DotIdentifier extends StatelessWidget {
-  final Color color;
+  final Color? color;
   const DotIdentifier({super.key, required this.color});
 
   @override

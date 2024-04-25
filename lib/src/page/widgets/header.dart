@@ -32,7 +32,7 @@ class Header extends StatelessWidget {
                   style: Theme.of(context).textTheme.bodyMedium,
                   children: [
                     TextSpan(
-                      text: '1500',
+                      text: '1500.38',
                       style: Theme.of(context).textTheme.bodyLarge,
                     )
                   ],
